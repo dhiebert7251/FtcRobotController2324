@@ -6,12 +6,12 @@ import com.arcrobotics.ftclib.hardware.RevIMU;
 import com.arcrobotics.ftclib.hardware.motors.Motor;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-@TeleOp
-public class FTC2048TeamCode_Take1 extends LinearOpMode{
+@TeleOp(name="Mec_Take1", group="Linear Opmode")
+//@Disabled
+
+public class Mec_Take1 extends LinearOpMode{
 
     // This variable determines whether the following program
     // uses field-centric or robot-centric driving styles. The
@@ -24,15 +24,15 @@ public class FTC2048TeamCode_Take1 extends LinearOpMode{
 
 
     // Declare OpMode members for the 2 arm motors and 1 arm servo
-    private DcMotor armLower = null;
-    private DcMotor armUpper = null;
-    private Servo claw = null;
+    //private DcMotor armLower = null;
+    //private DcMotor armUpper = null;
+    //private Servo claw = null;
 
     // Declare OpMode members for the 1 lift motor
-    private DcMotor lift = null;
+    //private DcMotor lift = null;
 
     // Declare OpMode members for the 1 shooter motor
-    private DcMotor shooter = null;
+    //private DcMotor shooter = null;
 
 
     @Override
@@ -40,16 +40,16 @@ public class FTC2048TeamCode_Take1 extends LinearOpMode{
         // define motor hardware
 
             //Arm motors
-            armLower = hardwareMap.get(DcMotor.class, "arm_lower");
-            armUpper = hardwareMap.get(DcMotor.class, "arm_upper");
+//            armLower = hardwareMap.get(DcMotor.class, "arm_lower");
+//            armUpper = hardwareMap.get(DcMotor.class, "arm_upper");
 
-            claw = hardwareMap.get(Servo.class, "claw_servo");
+//            claw = hardwareMap.get(Servo.class, "claw_servo");
 
             //Lift motors
-            lift = hardwareMap.get(DcMotor.class, "lift_motor");
+//            lift = hardwareMap.get(DcMotor.class, "lift_motor");
 
             //shooter motors
-            shooter = hardwareMap.get(DcMotor.class, "shooter_motor");
+//            shooter = hardwareMap.get(DcMotor.class, "shooter_motor");
 
 
         // constructor takes in frontLeft, frontRight, backLeft, backRight motors
@@ -86,7 +86,7 @@ public class FTC2048TeamCode_Take1 extends LinearOpMode{
 
         // the extended gamepad object
         GamepadEx driverOp = new GamepadEx(gamepad1);
-        GamepadEx operatorOp = new GamepadEx(gamepad2);
+        //GamepadEx operatorOp = new GamepadEx(gamepad2);
 
         waitForStart();
 
